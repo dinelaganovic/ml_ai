@@ -1,0 +1,17 @@
+U ovom grafiku, osa X predstavlja stvarne vrednosti ciljne promenljive (u ovom slučaju prisustvo raka pluća), dok osa Y predstavlja predviđene vrednosti ciljne promenljive na osnovu vašeg modela linearne regresije.
+
+Na osi X, "Actual" (Stvarno) označava stvarne vrednosti prisustva raka pluća (NO ili YES).
+Na osi Y, "Predicted" (Predviđeno) označava vrednosti koje je vaš model predvideo za prisustvo raka pluća (opet, NO ili YES), na osnovu karakteristika koje ste koristili za predikciju (pol, godine, pušenje, simptomi itd.).
+Linija crvene boje predstavlja liniju regresije koju je model naučio. To je linija koja najbolje približava odnos između stvarnih i predviđenih vrednosti. Idealno, ta linija bi trebalo da bude što bliže dijagonalnoj liniji koja ide od donjeg leve do gornjeg desno ugla, što bi ukazivalo na savršeno poklapanje između stvarnih i predviđenih vrednosti.
+
+Tačke koje vidite na grafiku predstavljaju tačke podataka. Svaka tačka predstavlja jedan uzorak iz vašeg skupa podataka. Na primer, ako je tačka bliže dijagonalnoj liniji, to znači da je model tačno predvideo prisustvo ili odsustvo raka pluća za taj uzorak. Ako su tačke daleko od linije, to znači da je model napravio veću grešku u predikciji za te tačke.
+
+Linija plt.plot([min(y), max(y)], [min(y_pred), max(y_pred)], '-r', label='Regression Line') predstavlja liniju regresije koju je vaš model naučio. Evo šta svaki deo znači:
+
+[min(y), max(y)]: Ovaj deo određuje x-koordinate početne i krajnje tačke linije. Ove tačke su minimum i maksimum stvarnih vrednosti ciljne promenljive (stvarne vrednosti prisustva ili odsustva raka pluća u vašem slučaju).
+
+[min(y_pred), max(y_pred)]: Ovaj deo određuje y-koordinate početne i krajnje tačke linije. Ove tačke su minimum i maksimum predviđenih vrednosti ciljne promenljive (vrednosti koje je model predvideo na osnovu ulaznih karakteristika).
+
+'-r': Ovaj deo označava stil linije. '-' znači da je linija neprekidna, dok 'r' označava crvenu boju linije.
+
+Ova linija će se protezati od tačke koja predstavlja minimum stvarnih vrednosti ciljne promenljive do tačke koja predstavlja maksimum stvarnih vrednosti, a istovremeno će prolaziti kroz tačke koje predstavljaju minimum i maksimum predviđenih vrednosti. Ovo omogućava vizualizaciju kako se stvarne vrednosti i predviđene vrednosti porede i kako se model ponaša u različitim delovima prostora.
