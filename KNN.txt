@@ -1,0 +1,17 @@
+
+Algoritam K najbližih suseda (engl. K-Nearest Neighbors, skraćeno KNN) je jednostavan, ali efikasan algoritam mašinskog učenja koji se koristi za klasifikaciju i regresiju. Osnovna ideja ovog algoritma je da za novi podatak predvidi odgovarajuću klasu (u slučaju klasifikacije) ili vrednost (u slučaju regresije) na osnovu sličnosti sa njemu najbližim podacima iz trening skupa.
+
+Glavni koraci algoritma su:
+
+Izbor parametra K: Prvo se bira broj najbližih suseda (K) koji će se koristiti za predikciju. Ovaj parametar može se izabrati na osnovu iskustva ili korišćenjem metoda kao što su unakrsna validacija ili analiza performansi.
+
+Računanje udaljenosti: Zatim se računa udaljenost između novog podatka i svih tačaka u trening skupu. Udaljenost se može izračunati korišćenjem različitih metrika, kao što su euklidska udaljenost, kosinusna udaljenost ili Minkovski rastojanje.
+
+Identifikacija K najbližih suseda: Nakon što se izračunaju udaljenosti, odabiru se K tačaka sa najmanjim udaljenostima od novog podatka.
+
+Predviđanje klase ili vrednosti: U slučaju klasifikacije, klasa novog podatka određuje se na osnovu glasanja većine među K najbližih suseda. U slučaju regresije, vrednost novog podatka se može odrediti na osnovu prosečne vrednosti izlaza svih K najbližih suseda.
+
+KNN je jednostavan za implementaciju i lako se razume. Međutim, može biti računski zahtevan, posebno sa velikim skupovima podataka, jer zahteva često računanje udaljenosti između novog podatka i svih tačaka u trening skupu. Takođe, odabir odgovarajućeg parametra K može biti izazov, a algoritam nije otporan na prisustvo šuma i neadekvatne skaliranje osobina.
+
+
+
