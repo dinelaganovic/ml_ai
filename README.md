@@ -3,3 +3,4 @@
 # -Logistic regression
 # -Naive Bayes
 # -MDP
+# -CNN 
